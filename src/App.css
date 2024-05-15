@@ -1,9 +1,40 @@
-.main-card{
-    width: 30%;
+.main-card {
+  width: 30%;
 }
 
 @media (max-width: 768px) {
-    .main-card {
+  .main-card {
+    width: 80%;
+  }
+}
+
+.todo-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20;
+}
+
+.todo-list {
+  width: 30%;
+  text-align: center;
+  margin-left: 6%;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .todo-list{
       width: 80%;
+    }
+  }
+.edit-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (max-width: 768px) {
+    .edit-buttonst{
+        flex-direction: row;
     }
   }

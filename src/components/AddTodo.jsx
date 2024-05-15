@@ -51,8 +51,8 @@ function AddTodo({ todos, setTodos }) {
     return (
         <>
             {todos.map((todo) => (
-                <div key={todo.id} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 20 }}>
-                    <Paper style={{ width: '30%', textAlign: 'center', marginLeft: '6%', marginRight: 10 }}>
+                <div key={todo.id} className='todo-list-container' >
+                    <Paper className='todo-list' >
                         {editMode && editId === todo.id ? (
                             <>
                                 <TextField
@@ -73,7 +73,7 @@ function AddTodo({ todos, setTodos }) {
                             </>
                         )}
                     </Paper>
-                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <div className='edit-buttons' >
                         <Button onClick={() => handleDel(todo.id)} variant="contained" color="error">Delete</Button>
                         {editMode && editId === todo.id ? (
                             <Button onClick={() => handleEdit(todo.id)} variant="contained" color="success">Save</Button>
