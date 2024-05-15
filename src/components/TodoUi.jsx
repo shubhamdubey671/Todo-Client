@@ -16,7 +16,7 @@ function TodoUi({ darkMode, setTodos }) {
             body: JSON.stringify({
                 title: title,
                 description: description
-            })
+            }),
         }).then((resp) => {
             // Fetch the updated list of todos after adding a new todo
             fetch("https://todo-server-xi.vercel.app/todos", {
@@ -28,6 +28,14 @@ function TodoUi({ darkMode, setTodos }) {
                 });
             });
         })
+    }
+    const clearField= ()=>{
+        setTitle("")
+        setDescription("")
+    }
+    const handleFunction= ()=>{
+        handleTodo(title, description);
+        clearField()
     }
 
     return (
@@ -69,7 +77,7 @@ function TodoUi({ darkMode, setTodos }) {
                     />
                 </div>
                 <div style={{ textAlign: 'center', paddingBottom: 16 }}>
-                    <Button variant="contained" onClick={() => handleTodo(title, description)} sx={{
+                    <Button variant="contained" onClick={() =>handleFunction() } sx={{
                         backgroundColor: '#942fad',
                         color: darkMode ? 'white' : 'white',
                         ":hover": {
