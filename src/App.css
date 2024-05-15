@@ -15,6 +15,13 @@
   padding-top: 20;
 }
 
+@media (max-width: 768px) {
+  .todo-list-container {
+    padding-top: 30px;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 .todo-list {
   width: 30%;
   text-align: center;
@@ -23,18 +30,17 @@
 }
 
 @media (max-width: 768px) {
-    .todo-list{
-      width: 80%;
-    }
+  .todo-list {
+    width: 80%;
   }
+}
 .edit-buttons {
   display: flex;
   flex-direction: column;
 }
 
-
 @media (max-width: 768px) {
-    .edit-buttonst{
-        flex-direction: row;
-    }
+  .edit-buttons {
+    flex-direction: row;
   }
+}
