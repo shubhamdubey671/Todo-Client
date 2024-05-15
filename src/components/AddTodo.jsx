@@ -14,7 +14,7 @@ function AddTodo({ todos, setTodos }) {
     }
 
     const handleDel = (id) => {
-        fetch(`https://mern-todo-api-livid.vercel.app/todos/${id}`, {
+        fetch(`https://todo-server-xi.vercel.app/todos/${id}`, {
             method: 'DELETE'
         }).then((resp) => {
             resp.json().then((data) => {
@@ -27,7 +27,7 @@ function AddTodo({ todos, setTodos }) {
     }
 
     const handleEdit = (id) => {
-        fetch(`https://mern-todo-api-livid.vercel.app/todos/${id}`, {
+        fetch(`https://todo-server-xi.vercel.app/todos/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
