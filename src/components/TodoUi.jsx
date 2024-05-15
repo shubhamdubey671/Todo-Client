@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Card } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import "../App.css"
 
 function TodoUi({ darkMode, setTodos }) {
     const [title, setTitle] = useState('');
@@ -29,18 +30,18 @@ function TodoUi({ darkMode, setTodos }) {
             });
         })
     }
-    const clearField= ()=>{
+    const clearField = () => {
         setTitle("")
         setDescription("")
     }
-    const handleFunction= ()=>{
+    const handleFunction = () => {
         handleTodo(title, description);
         clearField()
     }
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 20 }}>
-            <Card style={{ width: '30%' }}>
+            <Card className='main-card' >
                 <div style={{ padding: 16 }}>
                     <TextField
                         id="outlined-basic"
@@ -77,7 +78,7 @@ function TodoUi({ darkMode, setTodos }) {
                     />
                 </div>
                 <div style={{ textAlign: 'center', paddingBottom: 16 }}>
-                    <Button variant="contained" onClick={() =>handleFunction() } sx={{
+                    <Button variant="contained" onClick={() => handleFunction()} sx={{
                         backgroundColor: '#942fad',
                         color: darkMode ? 'white' : 'white',
                         ":hover": {
